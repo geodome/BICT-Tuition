@@ -159,7 +159,7 @@ def is_correct(expression:str) -> bool:
     last character is a digit 0-9
     the 2nd character is either + or -
     """
-    return len(expression) == 3 and expression[0].isdigit() and expression[2].isdigit() and (expression[1] == "+" or expression[1] == "-")
+    return len(expression) == 3 and expression[0].isdigit() and expression[2].isdigit() and expression[1] in ["+", "-"]
 
 def matches(expression:str, result:int) -> bool:
     """
@@ -180,7 +180,7 @@ def matches(expression:str, result:int) -> bool:
     d1 = int(expression[0])
     d2 = int(expression[2]) 
     operator = expression[1]
-    if d1 == 0 or d2 == 0:
+    if 0 in [d1, d2]:
         return True
     elif operator == "+":
         return d1 + d2 == result 
