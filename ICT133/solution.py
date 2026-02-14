@@ -197,8 +197,7 @@ def remove_from_hand(hand:list[int], expression:str) -> bool:
 
     if d1 and d2 are same digit then
         if hand contains at least 2 d1 then
-            remove d1 from hand
-            remove d1 from hand 
+            remove d1 twice from hand
             return True 
     else 
         if hand contains at 1east 1 d1 and at least 1 d2 then
